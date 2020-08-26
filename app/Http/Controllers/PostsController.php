@@ -38,7 +38,9 @@ class PostsController extends Controller
     {
         // upload image to db
 
-        $image = $request->image->store('posts');
+        // Storage::disk('public')->putFile('folders/inside/public', $request->file('post_image'));
+
+        $image = $request->image->store('posts', 'public');
 
         // create the post
 
