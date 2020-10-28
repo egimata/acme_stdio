@@ -17,100 +17,72 @@
 
     <form action="{{ isset($post) ? route('posts.update', $post->id) : route('posts.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-
         @if (isset($post))
-
-        @method('PUT')
-
+            @method('PUT')
         @endif
         <div class="form-group">
-
             <label for="title">Title</label>
-
-        <input type="text" class="form-control" name="title" id="title" value="{{ isset($post) ?$post->title: '' }}">
-
+            <input type="text" class="form-control" name="title" id="title" value="{{ isset($post) ?$post->title: '' }}">
         </div>
-        <div class="form-group">
 
+        <div class="form-group">
             <label for="description">Description</label>
-
-        <textarea name="description" id="description" cols="5" rows="5" class="form-control">{{ isset($post) ? $post->description: '' }}</textarea>
-
+            <textarea name="description" id="description" cols="5" rows="5" class="form-control">{{ isset($post) ? $post->description: '' }}</textarea>
         </div>
-        <div class="form-group">
 
+        <div class="form-group">
             <label for="content">Contents</label>
-
             <input id="content" type="hidden" name="content" value="{{ isset($post) ? $post->content: '' }}">
-
             <trix-editor input="content"></trix-editor>
-
         </div>
+
         <div class="form-group">
-
             <label for="published_at">Published at:</label>
-
             <input type="text" class="form-control" name="published_at" id="published_at" value="{{ isset($post) ?$post->published_at: '' }}">
-
         </div>
 
         @if (isset($post))
-
-        <div class="form-group">
-        <img src="{{ asset('storage/'.$post->image) }}" style="width: 100%;" alt="">
-        </div>
-
+            <div class="form-group">
+                <img src="{{ asset('storage/'.$post->image) }}" style="width: 100%;" alt="">
+            </div>
         @endif
 
         <div class="form-group">
-
             <label for="category">Category</label>
             <select name="category" class="form-control" id="category">
                 @foreach($categories as $category)
                     <option value="{{$category->id}}"
-
                         @if (isset($post))
-
                             @if ($category->id === $post->category_id)
-
                                 selected
-
                             @endif
-
                         @endif
-
                         >{{$category->name}}</option>
                 @endforeach
             </select>
-
         </div>
+
         @if ($tags->count() > 0)
-        <div class="form-group">
-
-
-            <label for="tags"> Tags</label>
+            <div class="form-group">
+                <label for="tags"> Tags</label>
                 <select name="tags[]" id="tags" class="form-control tags-selector" multiple>
                     @foreach ($tags as $tag)
                         <option value="{{$tag->id}}"
                             @if(isset($post))
-
                                 @if ($post->hasTag($tag->id))
-
                                     selected
-
                                 @endif
-
                             @endif
                             >
                             {{$tag->name}}
                         </option>
                     @endforeach
                 </select>
-            @else
-                <h5 style="text-align:left">No Tags Available</h5>
-
-
-        </div>
+            </div>
+        @else
+            <div>
+                 <h5 style="text-align:left">No Tags Available</h5>
+            </div>
         @endif
 
         <div class="form-group">

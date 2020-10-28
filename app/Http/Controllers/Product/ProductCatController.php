@@ -10,12 +10,18 @@ use App\SubPost;
 
 class ProductCatController extends Controller
 {
-    public function show(Post $post, Subpost $subpost) {
+    public function show(Subpost $subpost, $id) {
+        // $data = SubPost::where('id', subpost);
 
+        // return view('posts_cat.show')
+        //     ->with('post', $post)
+        //     ->with('subpost', $subpost)
+        //     ->with('subposts', SubPost::where('id', subpost));
+     
         return view('posts_cat.show')
-        ->with('post', $post)
+        // ->with('post', $post)
         ->with('subpost', $subpost)
-        ->with('subposts', SubPost::all());
+        ->with('subposts', SubPost::all()->where('post_id', $id));
 
     }
 
