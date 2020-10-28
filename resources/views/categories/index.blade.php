@@ -9,18 +9,33 @@
 <div class="card card-default">
     <div class="card-header">Categories</div>
     <div class="card-body">
+
+
+        @if($categories->count() > 0)
+
+
         <table class="table">
             <thead>
                 <th>Name</th>
-                <th></th>
+                <th>Posts Nr.</th>
+                <th>Image</th>
             </thead>
             <tbody>
                 @foreach($categories as $category)
 
                 <tr>
                     <td>
+
+                        <img src="{{ asset('storage/'.$category->image) }}" style="width: 50px; height: 50px" alt="">
+                    </td>
+                    <td>
                         {{$category->name}}
                     </td>
+
+                    <td>
+                        {{ $category->posts->count() }}
+                    </td>
+
                     <td>
                     <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-info btn-sm">Edit</a>
                     <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $category->id }})" >Delete</button>
@@ -57,6 +72,14 @@
             </form>
             </div>
         </div>
+
+
+        @else
+
+        <h3 class="text-centered">No Categories Available</h3>
+
+        @endif
+
     </div>
 </div>
 

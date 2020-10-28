@@ -5,38 +5,71 @@
 <div class="d-flex justify-content-start mb-2">
     <a href="{{ route('posts.create') }}" class="btn btn-success float-right"> Add Post </a>
 </div>
-<img src="public\storage\posts\x2aRctGfPurFEf8ALdesOtm4oLxPihash17S1QEA.jpeg" alt="">
+
 
 <div class="card cart-default">
     <div class="card-header">Posts</div>
 
     <div class="cart-body">
 
+        {{-- if there are no posts, dont show table, show a message for empty posts --}}
+
+        @if($posts->count() > 0)
         <table class="table">
 
             <thead>
 
                 <th>Image</th>
                 <th>Title</th>
+                <th>Category</th>
+                <th></th>
 
             </thead>
 
             <tbody>
-                <td>
-
-                    {{-- imazhi karit statiki qe nuk me hapet fare tja qm --}}
-                    <img src="{{asset('public\storage\posts\x2aRctGfPurFEf8ALdesOtm4oLxPihash17S1QEA.jpeg')}}" alt="">
-                 </td>
 
                 @foreach($posts as $post)
 
                     <tr>
                         <td>
-                            {{-- dinamiku rakut qe duhet tqisi imazhin ,,,shko ke postsController.php esht funksioni --}}
-                           <img src="{{ asset($post->image) }}" alt="">
+
+                           <img src="{{ asset('storage/'.$post->image) }}" style="width: 50px; height: 50px" alt="">
                         </td>
                         <td>
                             {{ $post->title }}
+                        </td>
+                        <td>
+                        <a href="{{ route('categories.edit', $post->category->id) }}">{{ $post->category->name}}</a>
+                        </td>
+                        {{-- if not post has been trashed --}}
+                        @if(!$post->trashed())
+                            <td>
+                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info btn-sm">Edit</a>
+                            </td>
+
+                        @else
+
+                        <td>
+
+                            <form action="{{ route('restore-posts', $post->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <button type="submit" class="btn btn-info btn-sm">Restore</button>
+                            </form>
+
+                        </td>
+
+                        @endif
+
+                        <td>
+                        <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button href="" class="btn btn-danger btn-sm">
+
+                                {{$post->trashed() ? 'Delete': 'Trash' }}
+                            </button>
+                        </form>
                         </td>
                     </tr>
 
@@ -45,7 +78,9 @@
             </tbody>
 
         </table>
-
+        @else
+        <h3 class="text-center">No Available Posts</h3>
+        @endif
     </div>
 </div>
 

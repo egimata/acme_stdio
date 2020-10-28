@@ -9,8 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +16,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+
+        a.btn-info  {
+            color:white
+        }
+
+    </style>
+
+    @yield('css')
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -56,12 +65,21 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('users.edit-profile') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('profile-form').submit();">
+                                        {{ __('Profile') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
+
+                                    <form id="profile-form" action="{{ route('users.edit-profile') }}" method="GET" style="display: none;">
+                                        @csrf
+                                    </form>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -92,12 +110,42 @@
                 <div class="row">
                     <div class="col-md-4">
                         <ul class="list-group">
+
+                            {{-- add link for admin permission --}}
+                            @if(auth()->user()->isAdmin())
+                                <li class="list-group-item">
+                                <a href="{{ route('users.index') }}">
+                                        Users
+                                    </a>
+                                </li>
+                            @endif
+
+
                             <li class="list-group-item">
                                 <a href="{{ route('posts.index') }}">Posts</a>
                             </li>
+
+                            <li class="list-group-item">
+                                <a href="{{ route('subposts.index') }}">SubPosts</a>
+                            </li>
+
+                            <li class="list-group-item">
+                            <a href="{{ route('tags.index') }}">Tags</a>
+                            </li>
+
                             <li class="list-group-item">
                             <a href="{{ route('categories.index') }}">Categories</a>
                             </li>
+                        </ul>
+                        <ul class="list-group mt-5">
+
+                            <li class="list-group-item">
+                                <a href="{{ route('trashed-posts.index') }}">Trash</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ route('trashed-subposts.index') }}">SubTrashed</a>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="col-md-8">
@@ -114,9 +162,9 @@
         </main>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 
     @yield('scripts')
 

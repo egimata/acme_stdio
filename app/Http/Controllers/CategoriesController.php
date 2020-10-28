@@ -37,9 +37,11 @@ class CategoriesController extends Controller
      */
     public function store(CreateCategoryRequest $request)
     {
+        $image = $request->image->store('posts', 'public');
 
-        Category::create([
-            'name' => $request->name
+        $category = Category::create([
+            'name' => $request->name,
+            'image' => $image
         ]);
 
         session()->flash('success', 'Category Created Successfully.');
@@ -99,6 +101,14 @@ class CategoriesController extends Controller
      */
     public function destroy(Category $category)
     {
+
+        if ($category->posts->count() > 0) {
+
+            session()->flash('error', 'Category cannot be deleted because it has some posts.');
+
+            return redirect()->back();
+        }
+
         $category->delete();
 
         session()->flash('success', 'Category Deleted Successfully');
