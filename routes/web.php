@@ -17,7 +17,7 @@ use App\Http\Controllers\Posts\PostsCatController;
 
 Route::get('/', 'WelcomeController@index');
 Route::get('posts_cat/posts/{post}',  [ProductCatController::class, 'show'])->name('posts_cat.show');
-Route::get('single_post/single/{subpost}'w,  [ProductCatController::class, 'single'])->name('single_post.single');
+Route::get('single_post/single/{subpost}',  [ProductCatController::class, 'single'])->name('single_post.single');
 // Route::get('posts_cat/{post}', [PostsCatController::class, 'post'])->name('posts_cat.post');
 
 Route::get('product_cat/categories/{category}', [ProductCatController::class, 'category'])->name('product_cat.design');
@@ -32,6 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('categories', 'CategoriesController')->middleware('auth');
 Route::resource('posts', 'PostsController')->middleware(['auth', 'verifyCategoriesCount']);
 Route::resource('subposts', 'SubPostsController')->middleware(['auth', 'verifyPostsCount']);
+Route::resource('single', 'GalleryController')->middleware(['auth', 'verifySubPostsCount']);
 Route::resource('tags', 'TagsController')->middleware('auth');
 Route::get('trashed-posts', 'PostsController@trashed')->name('trashed-posts.index');
 Route::get('trashed-subposts', 'SubPostsController@trashed')->name('trashed-subposts.index');

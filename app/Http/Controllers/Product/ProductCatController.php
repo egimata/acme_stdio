@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
 use App\SubPost;
+use App\Single;
 
 class ProductCatController extends Controller
 {
@@ -17,7 +18,7 @@ class ProductCatController extends Controller
         //     ->with('post', $post)
         //     ->with('subpost', $subpost)
         //     ->with('subposts', SubPost::where('id', subpost));
-     
+
         return view('posts_cat.show')
         // ->with('post', $post)
         ->with('subpost', $subpost)
@@ -25,8 +26,10 @@ class ProductCatController extends Controller
 
     }
 
-    public function single($id){
-        return view('single_post.single')->with('subposts', SubPost::all()->where('subpost_id', $id));
+    public function single(Single $single, $id){
+        return view('single_post.single')
+        ->with('single', $single)
+        ->with('single', Single::all()->where('subpost_id', $id));
     }
 
     public function category(Category $category) {

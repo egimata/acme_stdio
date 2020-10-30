@@ -130,6 +130,10 @@
                             </li>
 
                             <li class="list-group-item">
+                                <a href="{{ route('single.index') }}">SubPosts Images</a>
+                            </li>
+
+                            <li class="list-group-item">
                             <a href="{{ route('tags.index') }}">Tags</a>
                             </li>
 

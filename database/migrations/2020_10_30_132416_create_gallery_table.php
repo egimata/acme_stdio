@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddSoftDeletesToSubPostsTable extends Migration
+class CreateGalleryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddSoftDeletesToSubPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('subposts', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::create('singles', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->integer('subpost_id');
+            $table->string('image');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddSoftDeletesToSubPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('subposts', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-        });
+        Schema::dropIfExists('singles');
     }
 }
