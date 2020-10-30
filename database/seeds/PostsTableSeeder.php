@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Post;
 use App\Category;
+use App\SubPost;
 
 
 class PostsTableSeeder extends Seeder
@@ -70,6 +71,112 @@ class PostsTableSeeder extends Seeder
             'category_id' => $category4->id,
             'image' => 'posts/4.jpg'
 
+        ]);
+
+        $subpost1 = SubPost::create([
+            'title' => 'Kartvizita 1',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost2 = SubPost::create([
+            'title' => 'Kartvizita 2',
+            'post_id' => $post2->id,
+            'image'=> 'posts/sub2.jpg',
+        ]);
+        $subpost3 = SubPost::create([
+            'title' => 'Kartvizita 3',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub3.jpg',
+        ]);
+        $subpost4 = SubPost::create([
+            'title' => 'Kartvizita 4',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub4.jpg',
+        ]);
+        $subpost5 = SubPost::create([
+            'title' => 'Kartvizita 5',
+            'post_id' => $post2->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost6 = SubPost::create([
+            'title' => 'Kartvizita 6',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost7 = SubPost::create([
+            'title' => 'Kartvizita 7',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost8 = SubPost::create([
+            'title' => 'Kartvizita 8',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost9 = SubPost::create([
+            'title' => 'Kartvizita 9',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost10 = SubPost::create([
+            'title' => 'Kartvizita 10',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost11 = SubPost::create([
+            'title' => 'Kartvizita 11',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost12 = SubPost::create([
+            'title' => 'Kartvizita 12',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost13 = SubPost::create([
+            'title' => 'Kartvizita 13',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost14 = SubPost::create([
+            'title' => 'Kartvizita 14',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost15 = SubPost::create([
+            'title' => 'Kartvizita 15',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost16 = SubPost::create([
+            'title' => 'Kartvizita 16',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost17 = SubPost::create([
+            'title' => 'Kartvizita 17',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost18 = SubPost::create([
+            'title' => 'Kartvizita 18',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost19 = SubPost::create([
+            'title' => 'Kartvizita 19',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost20 = SubPost::create([
+            'title' => 'Kartvizita 20',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
+        ]);
+        $subpost21 = SubPost::create([
+            'title' => 'Kartvizita 21',
+            'post_id' => $post1->id,
+            'image'=> 'posts/sub1.jpg',
         ]);
     }
 }

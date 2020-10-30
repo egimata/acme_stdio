@@ -25,6 +25,10 @@ class ProductCatController extends Controller
 
     }
 
+    public function single($id){
+        return view('single_post.single')->with('subposts', SubPost::all()->where('subpost_id', $id));
+    }
+
     public function category(Category $category) {
 
         return view('product_cat.design')->with('category', $category)->with('posts', $category->posts()->simplePaginate(9));

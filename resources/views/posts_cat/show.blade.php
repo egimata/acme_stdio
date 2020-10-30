@@ -33,7 +33,7 @@
                                     <article class="qodef-e qodef-grid-item qodef-item--full post-2199 portfolio-item type-portfolio-item status-publish has-post-thumbnail hentry portfolio-category-authentic portfolio-category-custom portfolio-tag-advertising portfolio-tag-business">
                                         <div class="qodef-e-inner">
                                             <div class="qodef-e-image">
-                                                <div class="qodef-e-media-image"> <a itemprop="url" href="../../portfolio-item/custom-design/index.html"> 
+                                                <div class="qodef-e-media-image"> <a itemprop="url" href="{{ route('single_post.single', $subpost->id) }}"> 
                                                     <img width="800" height="750" src="{{asset('storage/'.$subpost->image)}}" class="attachment-full size-full wp-post-image" alt="a"   /> </a> </div>
                                             </div>
                                             <div class="qodef-e-content">

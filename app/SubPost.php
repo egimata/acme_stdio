@@ -12,7 +12,7 @@ class SubPost extends Model
 
     protected $fillable = [
 
-        'title', 'image', 'published_at', 'post_id',
+        'title', 'published_at', 'post_id', 'image',
     ];
 
     /**

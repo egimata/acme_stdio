@@ -17,6 +17,7 @@ use App\Http\Controllers\Posts\PostsCatController;
 
 Route::get('/', 'WelcomeController@index');
 Route::get('posts_cat/posts/{post}',  [ProductCatController::class, 'show'])->name('posts_cat.show');
+Route::get('single_post/single/{subpost}'w,  [ProductCatController::class, 'single'])->name('single_post.single');
 // Route::get('posts_cat/{post}', [PostsCatController::class, 'post'])->name('posts_cat.post');
 
 Route::get('product_cat/categories/{category}', [ProductCatController::class, 'category'])->name('product_cat.design');
