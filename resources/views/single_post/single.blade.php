@@ -1,13 +1,17 @@
+<title>
+    {{$single->title}}
+</title>
+
 @extends('layouts.mainlayout')
 
 @section('content')
-    
+
 
 <div class="qodef-page-title qodef-m qodef-title--standard-with-breadcrumbs qodef-alignment--left qodef-vertical-alignment--header-bottom">
     <div class="qodef-m-inner">
         <div class="qodef-m-content qodef-content-grid ">
             <h5 class="qodef-m-title entry-title">
-                Catalogs 
+                Catalogs
             </h5>
             <div itemprop="breadcrumb" class="qodef-breadcrumbs"><a itemprop="url" class="qodef-breadcrumbs-link" href="../../index.html"><span itemprop="title">Home</span></a><span class="qodef-breadcrumbs-separator"></span><a itemprop="url" class="qodef-breadcrumbs-link" href="../../portfolio-category/design/index.html"><span itemprop="title">Design</span></a><span class="qodef-breadcrumbs-separator"></span><span itemprop="title" class="qodef-breadcrumbs-current">Catalogs</span></div>
         </div>
@@ -26,24 +30,13 @@
                                         <div class="qodef-media">
                                             <div class="qodef-e qodef-magnific-popup qodef-popup-gallery qodef-grid qodef-layout--columns qodef-responsive--predefined qodef--no-bottom-space  qodef-col-num--3 qodef-gutter--small">
                                                 <div class="qodef-grid-inner clear qodef-magnific-popup qodef-popup-gallery">
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img2.jpg" data-type="image" title="portfolio-img2">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img2.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img2.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img2-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img2-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img2-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/06/portfolio-img6.jpg" data-type="image" title="portfolio-img6">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/06/portfolio-img6.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/06/portfolio-img6.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/06/portfolio-img6-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/06/portfolio-img6-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/06/portfolio-img6-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img5.jpg" data-type="image" title="portfolio-img5">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img5.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img5.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img5-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img5-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img5-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img4.jpg" data-type="image" title="portfolio-img4">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img4.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img4.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img4-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img4-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img4-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img7.jpg" data-type="image" title="portfolio-img7">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img7.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img7.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img7-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img7-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img7-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img9.jpg" data-type="image" title="portfolio-img9">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img9.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img9.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img9-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img9-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img9-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img1.jpg" data-type="image" title="portfolio-img1">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img1.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img1.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img1-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img1-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img1-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img11.jpg" data-type="image" title="portfolio-img11">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img11.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img11.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img11-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img11-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img11-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
-                                                    <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="../../wp-content/uploads/2020/05/portfolio-img12.jpg" data-type="image" title="portfolio-img12">
-                                                    <img width="800" height="750" src="../../wp-content/uploads/2020/05/portfolio-img12.jpg" class="attachment-full size-full" alt="a" srcset="https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img12.jpg 800w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img12-300x281.jpg 300w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img12-768x720.jpg 768w, https://etchy.qodeinteractive.com/wp-content/uploads/2020/05/portfolio-img12-600x563.jpg 600w" sizes="(max-width: 800px) 100vw, 800px" /> </a>
+
+                                                    @foreach ($single as $item)
+                                                        <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="{{asset('storage/'.$item->image)}}" data-type="image" title="portfolio-img2">
+                                                        <img width="800" height="750" src="{{asset('storage/'.$item->image)}}" class="attachment-full size-full" alt="a" sizes="(max-width: 800px) 100vw, 800px" />
+                                                        </a>
+                                                    @endforeach
+
                                                 </div>
                                             </div>
                                         </div>
@@ -63,7 +56,7 @@
                                                                                     <div class="elementor-widget-container">
                                                                                         <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--left  qodef--icon-pack qodef--has-appear">
                                                                                             <h2 class="qodef-m-title">
-                                                                                                <span class="qodef-m-title-line">paper <span class="qodef-last-word">cups<span class="qodef-m-icon-wrapper"><span class="qodef-shortcode qodef-m  qodef-icon-holder qodef-size--default qodef-layout--normal"> </span></span></span></span> 
+                                                                                                <span class="qodef-m-title-line">paper <span class="qodef-last-word">cups<span class="qodef-m-icon-wrapper"><span class="qodef-shortcode qodef-m  qodef-icon-holder qodef-size--default qodef-layout--normal"> </span></span></span></span>
                                                                                             </h2>
                                                                                             <p class="qodef-m-text" style="margin-top: 15px">Te dicant atomorum est, eus pri nostro malorum feugiat. Vel solum putent et, tota minim choro eos ex. An epicurei salutandi constituto e qui, possim ocurreret complectitur usu at, cum natum dolorem cum minimum ei. Quo at numquam contentiones.</p>
                                                                                         </div>
@@ -96,12 +89,12 @@
                                                     <a itemprop="url" class="qodef-e-category" href="../../portfolio-category/design/index.html">
                                                     Design</a>, <a itemprop="url" class="qodef-e-category" href="../../portfolio-category/digital-print/index.html">
                                                     Digital print</a>, <a itemprop="url" class="qodef-e-category" href="../../portfolio-category/unique/index.html">
-                                                    Unique</a> 
+                                                    Unique</a>
                                                 </div>
                                             </div>
                                             <div class="qodef-e qodef-inof--social-share">
                                                 <div class="qodef-shortcode qodef-m  qodef-social-share clear qodef-layout--text ">
-                                                    <span class="qodef-social-title">Share:</span> 
+                                                    <span class="qodef-social-title">Share:</span>
                                                     <ul class="qodef-shortcode-list">
                                                         <li class="qodef-facebook-share"> <a itemprop="url" class="qodef-share-link" href="#" onclick="window.open(&#039;https://www.facebook.com/sharer.php?u=https%3A%2F%2Fetchy.qodeinteractive.com%2Fportfolio-item%2Fcatalogs%2F&#039;, &#039;sharer&#039;, &#039;toolbar=0,status=0,width=620,height=280&#039;);"> <span class="qodef-social-network-text">fb</span> </a></li>
                                                         <li class="qodef-twitter-share"> <a itemprop="url" class="qodef-share-link" href="#" onclick="window.open(&#039;https://twitter.com/intent/tweet?text=paper+cups+Te+dicant+atomorum+est%2C+eus+pri+nostro+malorum+feugiat.+Vel+solum+putent+et%2C+tota++via+%40QodeInteractivehttps://etchy.qodeinteractive.com/portfolio-item/catalogs/&#039;, &#039;popupwindow&#039;, &#039;scrollbars=yes,width=800,height=400&#039;);"> <span class="qodef-social-network-text">tw</span> </a></li>

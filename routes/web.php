@@ -32,6 +32,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('categories', 'CategoriesController')->middleware('auth');
 Route::resource('posts', 'PostsController')->middleware(['auth', 'verifyCategoriesCount']);
 Route::resource('subposts', 'SubPostsController')->middleware(['auth', 'verifyPostsCount']);
+Route::resource('single', 'GalleryController')->middleware(['auth', 'verifySubPostsCount']);
 Route::resource('tags', 'TagsController')->middleware('auth');
 Route::get('trashed-posts', 'PostsController@trashed')->name('trashed-posts.index');
 Route::get('trashed-subposts', 'SubPostsController@trashed')->name('trashed-subposts.index');

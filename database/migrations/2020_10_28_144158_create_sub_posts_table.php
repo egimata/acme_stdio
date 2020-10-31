@@ -13,7 +13,7 @@ class CreateSubPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_posts', function (Blueprint $table) {
+        Schema::create('subposts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('image');
@@ -30,6 +30,6 @@ class CreateSubPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_posts');
+        Schema::dropIfExists('subposts');
     }
 }

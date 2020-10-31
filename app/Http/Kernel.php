@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
  use App\Http\Middleware\VerifyCategoriesCount;
  use App\Http\Middleware\VerifyIsAdmin;
  use App\Http\Middleware\VerifyPostsCount;
+ use App\Http\Middleware\VerifySubPostsCount;
 
 class Kernel extends HttpKernel
 {
@@ -68,6 +69,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'verifyCategoriesCount' => VerifyCategoriesCount::class,
         'verifyPostsCount' => VerifyPostsCount::class,
+        'verifySubPostsCount' => VerifySubPostsCount::class,
         'admin' => VerifyIsAdmin::class,
     ];
 }
