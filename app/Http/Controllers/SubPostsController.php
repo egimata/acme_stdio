@@ -73,7 +73,7 @@ class SubPostsController extends Controller
      */
     public function show(SubPost $subpost)
     {
-        return view('posts_cat.show')->with('subpost', $subpost)->with('subposts', SubPost::all());
+        return view('posts_cat.show')->with('subpost', $subpost)->with('sub_posts', SubPost::all());
     }
 
     /**
@@ -169,7 +169,7 @@ class SubPostsController extends Controller
         //fetches all posts
         $trashed = SubPost::onlyTrashed()->get();
         //withPosts gets everything after with-> (same as with ('posts', $trashed))
-        return view('subposts.index')->withSubPosts($trashed);
+        return view('.index')->with($trashed);
 
     }
 

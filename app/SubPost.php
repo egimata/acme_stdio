@@ -37,6 +37,11 @@ class SubPost extends Model
         return $this->belongsTo(Post::class);
     }
 
+    public function singles()
+    {
+        return $this->hasMany(Single::class);
+    }
+
     /**
      *
      *

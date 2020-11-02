@@ -27,20 +27,23 @@
             </thead>
 
             <tbody>
+                
 
                 @foreach($single as $item)
 
                     <tr>
                         <td>
-
                            <img src="{{ asset('storage/'.$item->image) }}" style="width: 50px; height: 50px" alt="">
                         </td>
                         <td>
-                            {{ $item->title }}
+                            {{ $item->sub_title }}
                         </td>
+
+                        @foreach ($item as $sub)  
                         <td>
-                        <a href="{{ route('subposts.edit', $item->subpost->id) }}">{{ $item->subpost->title}}</a>
+                        <a href="{{ route('subposts.edit', $item->sub->id) }}">{{ $item->sub->title }}</a>
                         </td>
+                        @endforeach
                         {{-- if not post has been trashed --}}
                         {{-- @if(!$single->trashed())
                             <td>
@@ -62,14 +65,14 @@
                         @endif
 
                         <td> --}}
-                        <form action="{{ route('single.destroy', $item->id) }}" method="POST">
+                        {{-- <form action="{{ route('single.destroy', $item->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button href="" class="btn btn-danger btn-sm">
 
                                 {{$subpost->delete() ? 'Delete': "Restore" }}
                             </button>
-                        </form>
+                        </form> --}}
                         </td>
                     </tr>
 

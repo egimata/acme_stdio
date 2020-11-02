@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Post;
 use App\Category;
 use App\SubPost;
+use App\Single;
 
 
 class PostsTableSeeder extends Seeder
@@ -178,5 +179,56 @@ class PostsTableSeeder extends Seeder
             'post_id' => $post1->id,
             'image'=> 'posts/sub1.jpg',
         ]);
+        $single1 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single2 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single3 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single4 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single5 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single6 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single7 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single8 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single9 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        $single10 = Single::create([
+            'sub_title' => 'Kartvizita 21',
+            'sub_post_id' => $subpost1->id,
+            'image'=> 'gallery/sub1.jpg',
+        ]);
+        
     }
 }

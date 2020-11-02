@@ -8,7 +8,7 @@ class Single extends Model
 {
     protected $fillable = [
 
-        'title', 'image', 'subpost_id',
+        'sub_title', 'image', 'sub_post_id',
     ];
 
     public function deleteImage()
@@ -23,6 +23,8 @@ class Single extends Model
     {
         return $this->belongsTo(SubPost::class);
     }
+
+
 
     /**
      *

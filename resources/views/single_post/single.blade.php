@@ -1,17 +1,17 @@
 <title>
-    {{$single->title}}
+    {{$subpost->title}}
 </title>
+@include('layouts/partials/head')
+@include('layouts/partials/header')
 
-@extends('layouts.mainlayout')
 
-@section('content')
 
 
 <div class="qodef-page-title qodef-m qodef-title--standard-with-breadcrumbs qodef-alignment--left qodef-vertical-alignment--header-bottom">
     <div class="qodef-m-inner">
         <div class="qodef-m-content qodef-content-grid ">
             <h5 class="qodef-m-title entry-title">
-                Catalogs
+                Galeria e {{ $subpost->title }}
             </h5>
             <div itemprop="breadcrumb" class="qodef-breadcrumbs"><a itemprop="url" class="qodef-breadcrumbs-link" href="../../index.html"><span itemprop="title">Home</span></a><span class="qodef-breadcrumbs-separator"></span><a itemprop="url" class="qodef-breadcrumbs-link" href="../../portfolio-category/design/index.html"><span itemprop="title">Design</span></a><span class="qodef-breadcrumbs-separator"></span><span itemprop="title" class="qodef-breadcrumbs-current">Catalogs</span></div>
         </div>
@@ -31,7 +31,8 @@
                                             <div class="qodef-e qodef-magnific-popup qodef-popup-gallery qodef-grid qodef-layout--columns qodef-responsive--predefined qodef--no-bottom-space  qodef-col-num--3 qodef-gutter--small">
                                                 <div class="qodef-grid-inner clear qodef-magnific-popup qodef-popup-gallery">
 
-                                                    @foreach ($single as $item)
+                                                    @foreach ($singles as $item) 
+                                                      
                                                         <a itemprop="image" class="qodef-popup-item qodef-grid-item" href="{{asset('storage/'.$item->image)}}" data-type="image" title="portfolio-img2">
                                                         <img width="800" height="750" src="{{asset('storage/'.$item->image)}}" class="attachment-full size-full" alt="a" sizes="(max-width: 800px) 100vw, 800px" />
                                                         </a>
@@ -56,7 +57,7 @@
                                                                                     <div class="elementor-widget-container">
                                                                                         <div class="qodef-shortcode qodef-m  qodef-section-title qodef-alignment--left  qodef--icon-pack qodef--has-appear">
                                                                                             <h2 class="qodef-m-title">
-                                                                                                <span class="qodef-m-title-line">paper <span class="qodef-last-word">cups<span class="qodef-m-icon-wrapper"><span class="qodef-shortcode qodef-m  qodef-icon-holder qodef-size--default qodef-layout--normal"> </span></span></span></span>
+                                                                                                <span class="qodef-m-title-line">{{ $subpost->title }} <span class="qodef-last-word"><span class="qodef-m-icon-wrapper"><span class="qodef-shortcode qodef-m  qodef-icon-holder qodef-size--default qodef-layout--normal"> </span></span></span></span>
                                                                                             </h2>
                                                                                             <p class="qodef-m-text" style="margin-top: 15px">Te dicant atomorum est, eus pri nostro malorum feugiat. Vel solum putent et, tota minim choro eos ex. An epicurei salutandi constituto e qui, possim ocurreret complectitur usu at, cum natum dolorem cum minimum ei. Quo at numquam contentiones.</p>
                                                                                         </div>
@@ -122,4 +123,4 @@
     </main>
 </div>
 </div>
-@endsection
+ @include('layouts/partials/footer_scripts')   

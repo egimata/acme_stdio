@@ -37,6 +37,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function subposts()
+    {
+        return $this->hasMany(SubPost::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);

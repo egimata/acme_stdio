@@ -44,14 +44,16 @@ class GalleryController extends Controller
 
         $image = $request->image->store('gallery', 'public');
 
+
+
         // create the post
 
         $single = Single::create([
-            'title' => $request->title,
+            'sub_title' => $request->title,
 
             'image' => $image,
 
-            'subpost_id' => $request->subpost
+            'sub_post_id' => $request->subpost
         ]);
 
 
@@ -71,7 +73,7 @@ class GalleryController extends Controller
      */
     public function show(Single $single)
     {
-        return view('single_post.single')->with('single', $single)->with('gallery', Single::all());
+        return view('single_post.single')->with('single', $single)->with('singles', Single::all());
     }
 
     /**
@@ -96,7 +98,7 @@ class GalleryController extends Controller
     public function update(UpdateSingleRequest $request, Single $single)
     {
 
-        $data = $request->only(['title']);
+        $data = $request->only(['sub_title']);
 
         //check if new image
 

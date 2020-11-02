@@ -1,7 +1,9 @@
 
-@section('title')
-    {{ $subpost->title }}
-@endsection
+<title>
+    {{ $post->title }}
+</title>
+    
+
 
 @extends('layouts.mainlayout')
 
@@ -13,7 +15,7 @@
                 <div class="qodef-m-inner">
                     <div class="qodef-m-content qodef-content-grid ">
                         <h5 class="qodef-m-title entry-title">
-                            {{$subpost->title}}
+                            {{$post->title}}
                         </h5>
                         <div itemprop="breadcrumb" class="qodef-breadcrumbs"><a itemprop="url" class="qodef-breadcrumbs-link" href="../../index.html"><span itemprop="title">Home</span></a><span class="qodef-breadcrumbs-separator"></span><a itemprop="url" class="qodef-breadcrumbs-link" href="../custom/index.html"><span itemprop="title">Custom</span></a><span class="qodef-breadcrumbs-separator"></span><span itemprop="title" class="qodef-breadcrumbs-current">Authentic</span></div>
                     </div>

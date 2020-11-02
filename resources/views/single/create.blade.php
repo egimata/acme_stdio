@@ -27,7 +27,7 @@
 
             <label for="title">Title</label>
 
-        <input type="text" class="form-control" name="title" id="title" value="{{ isset($single) ?$single->title: '' }}">
+        <input type="text" class="form-control" name="sub_title" id="sub_title" value="{{ isset($single) ?$single->sub_title: '' }}">
 
         </div>
 
@@ -49,8 +49,8 @@
 
         <div class="form-group">
 
-            <label for="post">SubPost</label>
-            <select name="post" class="form-control" id="post">
+            <label for="subpost">SubPost</label>
+            <select name="subpost" class="form-control" id="subpost">
                 @foreach($subposts as $subpost)
                     <option value="{{$subpost->id}}"
 

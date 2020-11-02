@@ -13,7 +13,7 @@ class AddSoftDeletesToSubPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('subposts', function (Blueprint $table) {
+        Schema::table('sub_posts', function (Blueprint $table) {
             $table->softDeletes();
         });
     }
@@ -25,7 +25,7 @@ class AddSoftDeletesToSubPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('subposts', function (Blueprint $table) {
+        Schema::table('sub_posts', function (Blueprint $table) {
             $table->dropColumn('deleted_at');
         });
     }

@@ -1,9 +1,6 @@
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>Print Digital &#8211; Acme Studio</title>
+<title>{{ $category->name }}</title>
 </head>
 
 @extends('layouts.mainlayout')

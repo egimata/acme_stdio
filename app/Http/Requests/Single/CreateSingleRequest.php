@@ -24,7 +24,7 @@ class CreateSingleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:subposts',
+            'title' => 'required|unique:sub_posts',
             'image' => 'required|image|mimes:png,jpg,jpeg,svg|max:3048',
         ];
     }

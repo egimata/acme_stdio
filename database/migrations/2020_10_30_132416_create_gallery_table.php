@@ -15,8 +15,8 @@ class CreateGalleryTable extends Migration
     {
         Schema::create('singles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->integer('subpost_id');
+            $table->string('sub_title');
+            $table->integer('sub_post_id');
             $table->string('image');
             $table->timestamps();
         });

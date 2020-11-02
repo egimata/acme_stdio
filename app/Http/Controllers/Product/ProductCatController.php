@@ -11,7 +11,7 @@ use App\Single;
 
 class ProductCatController extends Controller
 {
-    public function show(Subpost $subpost, $id) {
+    public function show(Post $post) {
         // $data = SubPost::where('id', subpost);
 
         // return view('posts_cat.show')
@@ -19,17 +19,12 @@ class ProductCatController extends Controller
         //     ->with('subpost', $subpost)
         //     ->with('subposts', SubPost::where('id', subpost));
 
-        return view('posts_cat.show')
-        // ->with('post', $post)
-        ->with('subpost', $subpost)
-        ->with('subposts', SubPost::all()->where('post_id', $id));
+        return view('posts_cat.show')->with('post', $post)->with('subposts', $post->subposts()->simplePaginate(9));
 
     }
 
-    public function single(Single $single, $id){
-        return view('single_post.single')
-        ->with('single', $single)
-        ->with('single', Single::all()->where('subpost_id', $id));
+    public function single(SubPost $subpost ){
+        return view('single_post.single')->with('subpost', $subpost)->with('singles', $subpost->singles()->simplePaginate(20));
     }
 
     public function category(Category $category) {
